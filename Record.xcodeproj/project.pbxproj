@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E54FE7C325AF35430085E44E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FE7C225AF35420085E44E /* TimerViewController.swift */; };
+		E54FE7C925B3E2500085E44E /* setViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FE7C825B3E2500085E44E /* setViewController.swift */; };
 		E5A119F2258EF03C00981039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A119F1258EF03C00981039 /* AppDelegate.swift */; };
 		E5A119F4258EF03C00981039 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A119F3258EF03C00981039 /* SceneDelegate.swift */; };
 		E5A119F6258EF03C00981039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A119F5258EF03C00981039 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E54FE7C225AF35420085E44E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		E54FE7C825B3E2500085E44E /* setViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewController.swift; sourceTree = "<group>"; };
 		E5A119EE258EF03C00981039 /* Record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Record.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A119F1258EF03C00981039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5A119F3258EF03C00981039 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				E5A119F3258EF03C00981039 /* SceneDelegate.swift */,
 				E5A119F5258EF03C00981039 /* ViewController.swift */,
 				E54FE7C225AF35420085E44E /* TimerViewController.swift */,
+				E54FE7C825B3E2500085E44E /* setViewController.swift */,
 				E5A119F7258EF03C00981039 /* Main.storyboard */,
 				E5A119FA258EF04200981039 /* Assets.xcassets */,
 				E5A119FC258EF04200981039 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				E5A119F6258EF03C00981039 /* ViewController.swift in Sources */,
 				E5A119F2258EF03C00981039 /* AppDelegate.swift in Sources */,
 				E5A119F4258EF03C00981039 /* SceneDelegate.swift in Sources */,
+				E54FE7C925B3E2500085E44E /* setViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

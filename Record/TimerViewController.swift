@@ -28,7 +28,7 @@ class TimerViewController: UIViewController {
         if !timer.isValid{
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up),userInfo: nil, repeats: true)
 
-        
+        }
     }
     @IBAction func stop(){
         if timer .isValid{
@@ -36,7 +36,7 @@ class TimerViewController: UIViewController {
         
     }
     }
-    }
+    
     /*
     // MARK: - Navigation
 
