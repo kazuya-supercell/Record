@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1010" y="167"/>
         </scene>
-        <!--View Controller-->
+        <!--Log View Controller-->
         <scene sceneID="YrL-pB-YTc">
             <objects>
-                <viewController id="Mhu-m0-UUL" sceneMemberID="viewController">
+                <viewController id="Mhu-m0-UUL" customClass="LogViewController" customModule="Record" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sPV-WA-sLl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
