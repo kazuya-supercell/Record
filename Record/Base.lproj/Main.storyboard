@@ -50,7 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="rha-3o-ulq" kind="presentation" id="I9l-ND-3cQ"/>
+                        <segue destination="rha-3o-ulq" kind="presentation" identifier="showtimer" id="I9l-ND-3cQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdE-A0-lOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

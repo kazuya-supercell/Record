@@ -33,21 +33,16 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
     let database = UserDefaults.standard // データベース
     
    
-   
-    @IBAction func tapCell(){
-        
     
-
-
-        
-    }
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         self.tableView.delegate = self
         logList = saveData.object(forKey: "logs") as! [[String: Any]]
-
+        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -57,6 +52,15 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
             database.set(logList, forKey: "logs")
             tableView.deleteRows(at: [indexPath], with: .fade)
     }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showtimer", sender: nil)
+        
+        let tapLog = logList[indexPath.row]
+
+          performSegue(withIdentifier: "showtimer", sender: tapLog)
+
     }
     
     
