@@ -41,7 +41,7 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
         super.viewDidLoad()
         tableView.dataSource = self
         self.tableView.delegate = self
-        logList = saveData.object(forKey: "logs") as! [[String: Any]]
+        logList = saveData.object(forKey: "logs") as? [[String: Any]] ?? []
         tableView.reloadData()
         // Do any additional setup after loading the view.
     }

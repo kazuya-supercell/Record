@@ -25,7 +25,7 @@ class setViewController: UIViewController {
             
             "duration" : 0
         ]
-        var currentLogs:[[String: Any]] = saveData.array(forKey: "logs") as! [[String: Any]]
+        var currentLogs:[[String: Any]] = saveData.array(forKey: "logs") as? [[String: Any]] ?? []
         
         currentLogs.append(log)
         saveData.set(currentLogs, forKey: "logs")
