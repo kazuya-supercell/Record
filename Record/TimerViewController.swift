@@ -14,13 +14,18 @@ class TimerViewController: UIViewController {
     
     var timer: Timer = Timer()
     
+    var log: [String: Any] = [:]
+    
+    
     @objc func up(){
-        count = count + 0.01
+        count = count - 0.01
         label.text = String(format: "%.2f", count)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        performSegue(withIdentifier: "TimerViewController", sender: log)
 
         // Do any additional setup after loading the view.
     }

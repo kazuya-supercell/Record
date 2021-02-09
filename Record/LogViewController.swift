@@ -9,7 +9,7 @@ import UIKit
 
 class LogViewController: UIViewController, UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return logList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,12 +55,22 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showtimer", sender: nil)
-        
+       
         let tapLog = logList[indexPath.row]
 
           performSegue(withIdentifier: "showtimer", sender: tapLog)
 
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+        if segue.identifier == "showtimer" {
+          
+            let next = segue.destination as! TimerViewController
+        
+            next.log = sender as! [String: Any]
+        }
     }
     
     

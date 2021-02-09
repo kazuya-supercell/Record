@@ -50,6 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="au5-qR-bU8" id="0h8-cT-VGL"/>
                         <segue destination="rha-3o-ulq" kind="presentation" identifier="showtimer" id="I9l-ND-3cQ"/>
                     </connections>
                 </viewController>

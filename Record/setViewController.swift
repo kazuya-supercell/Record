@@ -21,14 +21,14 @@ class setViewController: UIViewController {
         //userDefaultに保存する
         let log : [String: Any] = [
             " name" : name,
-            "date" : date.timeIntervalSince1970,
+            "startDate" : date.timeIntervalSince1970,
             
-            "dration" : 0
+            "duration" : 0
         ]
         var currentLogs:[[String: Any]] = saveData.array(forKey: "logs") as! [[String: Any]]
         
         currentLogs.append(log)
-        saveData.set(log, forKey: "logs")
+        saveData.set(currentLogs, forKey: "logs")
         
     }
     
