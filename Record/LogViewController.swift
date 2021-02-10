@@ -50,7 +50,8 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        logList = saveData.object(forKey: "logs") as? [[String: Any]] ?? []
+                tableView.reloadData()
         print("viewWillAppear")
     }
     
