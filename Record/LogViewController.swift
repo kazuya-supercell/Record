@@ -18,6 +18,8 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
         
         cell?.textLabel?.text = logList[indexPath.row]["name"] as! String
         
+      
+        
         return cell!
     }
     
@@ -45,6 +47,15 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
         tableView.reloadData()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewWillAppear")
+    }
+    
+  
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{

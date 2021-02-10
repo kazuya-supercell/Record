@@ -14,7 +14,7 @@
                 <navigationController id="kNa-KX-6qT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="d20-5B-d35"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6HI-38-UUo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,7 +30,7 @@
             <objects>
                 <viewController id="Mhu-m0-UUL" customClass="LogViewController" customModule="Record" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sPV-WA-sLl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="au5-qR-bU8">
@@ -55,13 +55,13 @@
                     <navigationItem key="navigationItem" id="OQD-bZ-dM2">
                         <barButtonItem key="rightBarButtonItem" title="＋" id="UB4-Tj-UL7">
                             <connections>
-                                <segue destination="9ei-hG-L1s" kind="presentation" id="dF4-rM-UV5"/>
+                                <segue destination="9ei-hG-L1s" kind="presentation" modalPresentationStyle="fullScreen" id="dF4-rM-UV5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="au5-qR-bU8" id="0h8-cT-VGL"/>
-                        <segue destination="rha-3o-ulq" kind="presentation" identifier="showtimer" id="I9l-ND-3cQ"/>
+                        <segue destination="rha-3o-ulq" kind="presentation" identifier="showtimer" modalPresentationStyle="fullScreen" id="I9l-ND-3cQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdE-A0-lOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,7 +73,7 @@
             <objects>
                 <viewController id="rha-3o-ulq" customClass="TimerViewController" customModule="Record" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9gG-tS-5tU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8G-en-WGk">
@@ -116,7 +116,7 @@
             <objects>
                 <viewController id="qUT-LV-EZp" customClass="setViewController" customModule="Record" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qgH-3A-PAw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BE8-Qo-lbA">
@@ -170,7 +170,7 @@
             <objects>
                 <viewController id="44Z-ly-UX6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m8C-ag-IoB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="avA-Qy-F0z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -192,7 +192,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="YHr-2K-AXV" kind="presentation" id="ZaY-sz-NFy"/>
+                        <segue destination="YHr-2K-AXV" kind="presentation" modalPresentationStyle="fullScreen" id="ZaY-sz-NFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -224,7 +224,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ei-hG-L1s" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kpa-no-W03">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -20,7 +20,7 @@ class setViewController: UIViewController {
         let date = datePickerView.date
         //userDefaultに保存する
         let log : [String: Any] = [
-            " name" : name,
+            "name" : name,
             "startDate" : date.timeIntervalSince1970,
             
             "duration" : 0
@@ -29,6 +29,10 @@ class setViewController: UIViewController {
         
         currentLogs.append(log)
         saveData.set(currentLogs, forKey: "logs")
+
+        self.dismiss(animated: true, completion: nil)
+    
+        
         
     }
     
