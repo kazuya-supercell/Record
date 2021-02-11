@@ -89,7 +89,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="START"/>
                                 <connections>
-                                    <action selector="start" destination="rha-3o-ulq" eventType="touchUpInside" id="yuF-vJ-1qS"/>
+                                    <action selector="start" destination="rha-3o-ulq" eventType="touchUpInside" id="Syu-FQ-JOU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-DY-iec">
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90a-l2-xYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962.3188405797105" y="187.5"/>
+            <point key="canvasLocation" x="3258" y="171"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="Cll-OI-Ica">
@@ -168,6 +168,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jrQ-0u-dbg">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="aiR-7P-vAC"/>
                         <barButtonItem key="rightBarButtonItem" title="set" id="asX-3d-INK">
                             <connections>
                                 <action selector="tapSaveButton" destination="qUT-LV-EZp" id="mRG-OJ-fXa"/>
@@ -176,9 +177,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="datePickerView1" destination="gca-bD-2DS" id="gU2-vY-WcV"/>
-                        <outlet property="datePickerView2" destination="Sln-xl-FlD" id="Kzh-Kx-v1G"/>
+                        <outlet property="enddatePickerView" destination="Sln-xl-FlD" id="5Ll-Ko-PIy"/>
                         <outlet property="eventNameTextField" destination="BE8-Qo-lbA" id="0gM-oT-JDA"/>
+                        <outlet property="startdatePickerView" destination="gca-bD-2DS" id="FuH-Fq-Hdn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfD-gq-HiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

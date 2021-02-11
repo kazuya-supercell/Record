@@ -27,14 +27,14 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        performSegue(withIdentifier: "TimerViewController", sender: log)
-
+       
         // Do any additional setup after loading the view.
         
+        let startTimerInterval = log["startDate"] as! TimeInterval
+        let startDate = Date(timeIntervalSince1970: startTimerInterval)
         
-        let startDate = log["startDate"] as! Date
-        
-        let endDate = log["endDate"] as! Date
+        let endTimerInterval = log["endDate"]  as! TimeInterval
+        let endDate = Date(timeIntervalSince1970: endTimerInterval)
         
         let difference = endDate.distance(to: startDate)
         

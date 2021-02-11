@@ -11,15 +11,15 @@ class setViewController: UIViewController {
     
     @IBOutlet var label : UILabel!
     @IBOutlet var eventNameTextField : UITextField!
-    @IBOutlet var datePickerView1 : UIDatePicker!
-    @IBOutlet var datePickerView2 : UIDatePicker!
+    @IBOutlet var startdatePickerView : UIDatePicker!
+    @IBOutlet var enddatePickerView : UIDatePicker!
     
     let saveData: UserDefaults = .standard
 
     @IBAction func tapSaveButton (){
         let  name = eventNameTextField.text!
-        let date1 = datePickerView1.date
-        let date2 = datePickerView2.date
+        let date1 = startdatePickerView.date
+        let date2 = enddatePickerView.date
         //userDefaultに保存する
         let log : [String: Any] = [
             "name" : name,
