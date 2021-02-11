@@ -75,6 +75,7 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
     }
     
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         if segue.identifier == "showtimer" {
@@ -82,6 +83,7 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
             let next = segue.destination as! TimerViewController
         
             next.log = sender as! [String: Any]
+            
         }
     }
     

@@ -10,6 +10,8 @@ import UIKit
 class TimerViewController: UIViewController {
     @IBOutlet var label: UILabel!
     
+    @IBOutlet var durationLabel: UILabel!
+    
     var count : Float = 0.0
     
     var timer: Timer = Timer()
@@ -28,6 +30,16 @@ class TimerViewController: UIViewController {
         performSegue(withIdentifier: "TimerViewController", sender: log)
 
         // Do any additional setup after loading the view.
+        
+        
+        let startDate = log["startDate"] as! Date
+        
+        let endDate = log["endDate"] as! Date
+        
+        let difference = endDate.distance(to: startDate)
+        
+        durationLabel.text = String(difference)
+        
     }
     @IBAction func start(){
         if !timer.isValid{
@@ -42,6 +54,7 @@ class TimerViewController: UIViewController {
     }
     }
     
+   
     /*
     // MARK: - Navigation
 
