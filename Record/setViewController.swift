@@ -45,7 +45,7 @@ class setViewController: UIViewController, UITextFieldDelegate {
         let toolbar = UIToolbar()
         
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let okbutton: UIBarButtonItem = UIBarButtonItem(title: "OK", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapOkButton))
+        let okbutton: UIBarButtonItem = UIBarButtonItem(title: "閉じる", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapOkButton))
         
         toolbar.setItems([flexibleItem, okbutton, flexibleItem], animated: true)
         toolbar.sizeToFit()
