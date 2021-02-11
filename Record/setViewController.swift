@@ -7,7 +7,7 @@
 
 import UIKit
 
-class setViewController: UIViewController {
+class setViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var label : UILabel!
     @IBOutlet var eventNameTextField : UITextField!
@@ -41,11 +41,25 @@ class setViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let toolbar = UIToolbar()
+        
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let okbutton: UIBarButtonItem = UIBarButtonItem(title: "OK", style: UIBarButtonItem.Style.plain, target: self, action: #selector(tapOkButton))
+        
+        toolbar.setItems([flexibleItem, okbutton, flexibleItem], animated: true)
+        toolbar.sizeToFit()
+        eventNameTextField.delegate = self
+        
+        self.view.endEditing(true)
+        eventNameTextField .inputAccessoryView = toolbar
 
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func tapOkButton(_ sender: UIButton) {
+        self.view.endEditing(true)
+        let inputPassword = eventNameTextField.text!
     /*
     // MARK: - Navigation
 
@@ -56,4 +70,5 @@ class setViewController: UIViewController {
     }
     */
 
+}
 }

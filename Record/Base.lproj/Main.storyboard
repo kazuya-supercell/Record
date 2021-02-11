@@ -61,7 +61,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="au5-qR-bU8" id="0h8-cT-VGL"/>
-                        <segue destination="rha-3o-ulq" kind="presentation" identifier="showtimer" modalPresentationStyle="fullScreen" id="I9l-ND-3cQ"/>
+                        <segue destination="rha-3o-ulq" kind="show" identifier="showtimer" id="I9l-ND-3cQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdE-A0-lOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,6 +110,7 @@
                         <viewLayoutGuide key="safeArea" id="puC-KC-nWH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nh4-YI-wZV"/>
                     <connections>
                         <outlet property="durationLabel" destination="qtx-Gg-Woc" id="VUt-20-UZu"/>
                         <outlet property="label" destination="Nbp-DY-iec" id="qrX-cs-gWw"/>
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90a-l2-xYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3258" y="171"/>
+            <point key="canvasLocation" x="2962.3188405797105" y="187.5"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="Cll-OI-Ica">
@@ -168,7 +169,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jrQ-0u-dbg">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="aiR-7P-vAC"/>
                         <barButtonItem key="rightBarButtonItem" title="set" id="asX-3d-INK">
                             <connections>
                                 <action selector="tapSaveButton" destination="qUT-LV-EZp" id="mRG-OJ-fXa"/>
