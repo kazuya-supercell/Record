@@ -25,7 +25,7 @@ class setViewController: UIViewController, UITextFieldDelegate {
             "name" : name,
             "startDate" : startDate.timeIntervalSince1970,
             "endDate" : endDate.timeIntervalSince1970,
-            "duration" : endDate.distance(to: startDate)
+            "duration" : startDate.distance(to: endDate)
         ]
         var currentLogs:[[String: Any]] = saveData.array(forKey: "logs") as? [[String: Any]] ?? []
         

@@ -28,6 +28,7 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         
         count = log["duration"] as! TimeInterval
+        print(count)
         
        
         // Do any additional setup after loading the view.
