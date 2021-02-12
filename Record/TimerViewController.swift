@@ -12,20 +12,22 @@ class TimerViewController: UIViewController {
     
     @IBOutlet var durationLabel: UILabel!
     
-    var count : Float = 0.0
+    var count : TimeInterval = 0.0
     
     var timer: Timer = Timer()
     
     var log: [String: Any] = [:]
     
     
-    @objc func up(){
+    @objc func down(){
         count = count - 0.01
         label.text = String(format: "%.2f", count)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        count = log["duration"] as! TimeInterval
         
        
         // Do any additional setup after loading the view.
@@ -36,14 +38,14 @@ class TimerViewController: UIViewController {
         let endTimerInterval = log["endDate"]  as! TimeInterval
         let endDate = Date(timeIntervalSince1970: endTimerInterval)
         
-        let difference = endDate.distance(to: startDate)
+        let difference = startDate.distance(to: endDate)
         
         durationLabel.text = String(difference)
-        
+        label.text = String(difference)
     }
     @IBAction func start(){
         if !timer.isValid{
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up),userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.down),userInfo: nil, repeats: true)
 
         }
     }

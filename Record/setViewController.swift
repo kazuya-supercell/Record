@@ -18,14 +18,14 @@ class setViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func tapSaveButton (){
         let  name = eventNameTextField.text!
-        let date1 = startdatePickerView.date
-        let date2 = enddatePickerView.date
+        let startDate = startdatePickerView.date
+        let endDate = enddatePickerView.date
         //userDefaultに保存する
         let log : [String: Any] = [
             "name" : name,
-            "startDate" : date1.timeIntervalSince1970,
-            "endDate" : date2.timeIntervalSince1970,
-            "duration" : 0
+            "startDate" : startDate.timeIntervalSince1970,
+            "endDate" : endDate.timeIntervalSince1970,
+            "duration" : endDate.distance(to: startDate)
         ]
         var currentLogs:[[String: Any]] = saveData.array(forKey: "logs") as? [[String: Any]] ?? []
         
