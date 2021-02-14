@@ -18,10 +18,22 @@ class TimerViewController: UIViewController {
     
     var log: [String: Any] = [:]
     
+    let saveData : UserDefaults = UserDefaults.standard
+    
+    var logList :  [[String: Any]] = []
+    
     
     @objc func down(){
         count = count - 0.01
         label.text = String(format: "%.2f", count)
+        
+        for index in 0..<logList.count{
+            let name: String = logList[index]["name"] as! String
+            if name == log["name"] as! String{
+                logList[index]["duration"] = count
+            }
+        }
+        saveData.set(logList, forKey: "logs")
     }
     
     override func viewDidLoad() {
@@ -29,6 +41,8 @@ class TimerViewController: UIViewController {
         
         count = log["duration"] as! TimeInterval
         print(count)
+        
+        logList = saveData.object(forKey: "logs") as! [[String: Any]]
         
        
         // Do any additional setup after loading the view.
@@ -42,7 +56,9 @@ class TimerViewController: UIViewController {
         let difference = startDate.distance(to: endDate)
         
         durationLabel.text = String(difference)
-        label.text = String(difference)
+        label.text = String(count)
+        
+        
     }
     @IBAction func start(){
         if !timer.isValid{
