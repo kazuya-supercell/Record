@@ -59,6 +59,8 @@ class TimerViewController: UIViewController {
         label.text = String(count)
         
         
+        
+        
     }
     @IBAction func start(){
         if !timer.isValid{

@@ -38,7 +38,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="au5-qR-bU8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="sectionIndexBackgroundColor" name="MainColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="f3r-vr-S9S">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -46,16 +47,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f3r-vr-S9S" id="GYj-kh-cL1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" name="MainColor"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MainColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C2i-eL-wBU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MainColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="OQD-bZ-dM2">
-                        <barButtonItem key="rightBarButtonItem" title="＋" id="UB4-Tj-UL7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UB4-Tj-UL7">
                             <connections>
                                 <segue destination="9ei-hG-L1s" kind="presentation" modalPresentationStyle="fullScreen" id="dF4-rM-UV5"/>
                             </connections>
@@ -85,6 +88,11 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="tintColor" red="0.5607843137254902" green="0.46274509803921571" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="STOP"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="stop" destination="rha-3o-ulq" eventType="touchUpInside" id="IMo-2R-vxm"/>
                                 </connections>
@@ -96,6 +104,11 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="tintColor" red="0.5607843137254902" green="0.46274509803921571" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="START"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="start" destination="rha-3o-ulq" eventType="touchUpInside" id="Syu-FQ-JOU"/>
                                 </connections>
@@ -178,13 +191,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="タイトル・時間" id="jrQ-0u-dbg">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1YX-oH-1qD">
-                            <color key="tintColor" red="0.13725490196078433" green="0.23137254901960785" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="tapBackButton" destination="qUT-LV-EZp" id="CIf-RL-yTS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Set" id="asX-3d-INK">
-                            <color key="tintColor" red="0.13725490196078433" green="0.23137254901960785" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="tapSaveButton" destination="qUT-LV-EZp" id="mRG-OJ-fXa"/>
                             </connections>
@@ -278,6 +291,9 @@
         <namedColor name="MainColor">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
