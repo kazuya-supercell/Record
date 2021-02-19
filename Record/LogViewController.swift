@@ -23,6 +23,10 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
         return cell!
     }
     
+  
+    
+    
+    
     
     @IBOutlet var tableView : UITableView!
     
@@ -65,6 +69,13 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
             tableView.deleteRows(at: [indexPath], with: .fade)
     }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+       {
+           return true
+       }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
