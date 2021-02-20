@@ -98,6 +98,7 @@ class LogViewController: UIViewController, UITableViewDataSource , UITableViewDe
         }
     }
     
+  
     
     
   
